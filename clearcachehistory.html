@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Clear Cache and History</title>
+   </head>
+   <body>
+      <h1>Clear Cache and History</h1>
+      <button onclick="clearCache()">Clear Cache and History</button>
+
+      <script>
+         function clearCache() {
+            window.localStorage.clear(); // Clear local storage data
+            window.sessionStorage.clear(); // Clear session storage data
+            window.location.reload(true); // Reload the page to clear cache
+         }
+      </script>
+   </body>
+</html>
