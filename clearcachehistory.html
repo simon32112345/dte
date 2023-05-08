@@ -9,14 +9,30 @@
    </head>
    <body>
 <div>
-   <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    region: "eu1",
-    portalId: "139567675",
-    formId: "e909b1c1-6978-411d-a4bc-c2b0d74a6752"
-  });
-</script>
+    <iframe src='https://forms-eu1-172785-2226-199711-1729.public.500apps.org/forms?w_t=iframe&type=widget' frameborder="0" id="forms-172785-1729" style="width: 100%; height: 600px; visibility: hidden" scrolling="no"></iframe>
+    <script type="text/javascript">
+      var iframe = document.getElementById("forms-172785-1729");
+       window.handleIFrameMessage = function (e) {
+        setTimeout(() => {
+          iframe = document.getElementById("forms-172785-1729");
+          if (typeof e.data === "object") {
+            iframe.style.height = e.data.height;
+            iframe.style.visibility = "visible";
+            window.height = e.data.height;
+            document.getElementById('forms-172785-1729').style.height = window.height+"px";
+            return;
+          }
+        }, 10);
+        if (!iframe) {
+           return;
+        }
+      };
+      if (window.addEventListener) {
+         window.addEventListener("message", handleIFrameMessage, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onmessage", handleIFrameMessage);
+      }
+    </script>
       </div>
    </body>
    
