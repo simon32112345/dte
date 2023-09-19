@@ -1,13 +1,24 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Enter Password</title>
-		<script src="website.js"></script>
-	</head>
-	<body>
-<form class="passform" onsubmit="passcheck()" action="shortcuts.html">
-	Password: <input type="password" required id="pass1">
-	<input type="submit" onsubmit="passcheck()">
-</form>
-	</body>
-	
+<head>
+    <title>Password Page</title>
+</head>
+<body>
+    <h1>Enter Password</h1>
+    <p>Please enter the password to access Shortcuts:</p>
+    <input type="password" id="passwordInput">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="message"></p>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value;
+            if (password === "6250") {
+                window.location.href = "https://simon32112345.github.io/dte/shortcuts.html";
+            } else {
+                document.getElementById("message").textContent = "Wrong password. Please try again.";
+            }
+        }
+    </script>
+</body>
 </html>
