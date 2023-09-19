@@ -44,7 +44,6 @@ margin-top: 10px;
    color: white;
    text-align: center;
 }
-
 body {
       background-image: url('https://wallpaperaccess.com/full/1567666.png');
       background-size: cover;
@@ -52,8 +51,9 @@ body {
   </style>
 </head>
 <body>
- <h1 id="h1pw" style="text-align: center;">Enter Password</h1>
-    <p id="ppw" style="text-align: center;">Please enter the password to access Shortcuts:</p>
+<div class="container" id="enterpassform" style="text-align:center;margin-top:30px;">
+ <h1 id="h1pw" style="text-align: center;color:white">Enter Password</h1>
+    <p id="ppw" style="text-align: center;color:white;">Please enter the password to access Shortcuts:</p>
     <input type="password" id="passwordInput" style="text-align: center;">
     <button onclick="checkPassword()" id="btnpw" style="text-align: center;">Submit</button>
     <p id="message" style="text-align: center;"></p>
@@ -68,12 +68,15 @@ body {
 			   ppw.style.display = "none";
 			   btnpw.style.display = "none";
 			   message.style.display = "none";
+			 
 			   
             } else {
                 document.getElementById("message").textContent = "Wrong password. Please try again.";
             }
         }
     </script>
+	</div>
+	
 	<div class="container" id="wholepage" style="display:none;">
   <div id="navbarContent" class="collapse navbar-collapse">
     <ul class="navbar-nav d-flex justify-content-around">  
